@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur1"/>
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="subtleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Gradient Background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e6ffa;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#1558c7;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0d3a8a;stop-opacity:1"/>
+    </linearGradient>
+    
+    <style>
+      .neon-cyan { stroke: #4dd0e1; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; filter: url(#neonGlow); }
+      .neon-green { stroke: #7df2aa; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; filter: url(#neonGlow); }
+      .neon-white { stroke: #ffffff; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; filter: url(#neonGlow); opacity: 0.7; }
+      .subtle-cyan { stroke: #4dd0e1; fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; filter: url(#subtleGlow); opacity: 0.5; }
+      .subtle-green { stroke: #7df2aa; fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; filter: url(#subtleGlow); opacity: 0.4; }
+      .subtle-white { stroke: #ffffff; fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; filter: url(#subtleGlow); opacity: 0.3; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  
+  <!-- ============ TOP AREA ============ -->
+  
+  <!-- Large Paw - Top Left -->
+  <g class="neon-cyan" transform="translate(80, 60) scale(1.5)">
+    <ellipse cx="25" cy="40" rx="15" ry="12"/>
+    <ellipse cx="8" cy="18" rx="8" ry="10"/>
+    <ellipse cx="25" cy="8" rx="8" ry="10"/>
+    <ellipse cx="42" cy="18" rx="8" ry="10"/>
+  </g>
+  
+  <!-- Heart - Top -->
+  <g class="neon-green" transform="translate(280, 40) scale(1.3)">
+    <path d="M25,45 C25,45 5,30 5,18 C5,8 12,2 22,8 C25,10 25,10 25,10 C25,10 25,10 28,8 C38,2 45,8 45,18 C45,30 25,45 25,45 Z"/>
+  </g>
+  
+  <!-- Dog Silhouette - Top Center -->
+  <g class="neon-white" transform="translate(480, 50) scale(1.4)">
+    <path d="M10,50 L10,35 Q15,20 30,20 L40,15 L45,5 L50,15 L55,20 Q65,22 70,35 L70,50"/>
+    <circle cx="35" cy="28" r="2.5"/>
+    <ellipse cx="48" cy="32" rx="5" ry="2.5"/>
+  </g>
+  
+  <!-- Stethoscope - Top Right Area -->
+  <g class="neon-cyan" transform="translate(720, 30) scale(1.2)">
+    <circle cx="30" cy="55" r="18"/>
+    <path d="M30,37 L30,18 Q30,8 42,8 L55,8"/>
+    <path d="M5,8 L18,8 Q30,8 30,18"/>
+    <circle cx="5" cy="8" r="6"/>
+    <circle cx="55" cy="8" r="6"/>
+  </g>
+  
+  <!-- Small Paw -->
+  <g class="subtle-green" transform="translate(950, 80) scale(0.8)">
+    <ellipse cx="25" cy="40" rx="15" ry="12"/>
+    <ellipse cx="8" cy="18" rx="8" ry="10"/>
+    <ellipse cx="25" cy="8" rx="8" ry="10"/>
+    <ellipse cx="42" cy="18" rx="8" ry="10"/>
+  </g>
+  
+  <!-- Medical Kit - Top Right -->
+  <g class="neon-green" transform="translate(1100, 40) scale(1.3)">
+    <rect x="5" y="15" width="55" height="45" rx="6"/>
+    <rect x="18" y="5" width="29" height="15" rx="4"/>
+    <path d="M32,25 L32,50"/>
+    <path d="M20,37 L44,37"/>
+  </g>
+  
+  <!-- Cat Face - Far Top Right -->
+  <g class="neon-cyan" transform="translate(1350, 50) scale(1.1)">
+    <circle cx="35" cy="35" r="30"/>
+    <path d="M10,12 L18,28"/>
+    <path d="M60,12 L52,28"/>
+    <circle cx="24" cy="32" r="4"/>
+    <circle cx="46" cy="32" r="4"/>
+    <path d="M32,42 L35,47 L38,42"/>
+    <path d="M20,52 Q35,62 50,52"/>
+  </g>
+  
+  <!-- Bone - Top Far Right -->
+  <g class="subtle-white" transform="translate(1600, 60) scale(1.2)">
+    <path d="M15,22 Q3,16 3,27 Q3,38 15,32 L55,32 Q67,38 67,27 Q67,16 55,22 L15,22"/>
+  </g>
+  
+  <!-- Heart Small -->
+  <g class="subtle-cyan" transform="translate(1780, 40) scale(0.7)">
+    <path d="M25,45 C25,45 5,30 5,18 C5,8 12,2 22,8 C25,10 25,10 25,10 C25,10 25,10 28,8 C38,2 45,8 45,18 C45,30 25,45 25,45 Z"/>
+  </g>
+  
+  <!-- ============ UPPER MIDDLE AREA ============ -->
+  
+  <!-- Pill - Left -->
+  <g class="neon-green" transform="translate(60, 200) scale(1.4)">
+    <rect x="5" y="12" width="60" height="26" rx="13"/>
+    <line x1="35" y1="12" x2="35" y2="38"/>
+  </g>
+  
+  <!-- Shield with Paw - Left Center -->
+  <g class="neon-white" transform="translate(220, 180) scale(1.3)">
+    <path d="M35,5 L65,18 L65,50 Q65,75 35,88 Q5,75 5,50 L5,18 Z"/>
+    <g transform="translate(15, 28) scale(0.55)">
+      <ellipse cx="25" cy="38" rx="14" ry="11"/>
+      <ellipse cx="10" cy="18" rx="7" ry="9"/>
+      <ellipse cx="25" cy="8" rx="7" ry="9"/>
+      <ellipse cx="40" cy="18" rx="7" ry="9"/>
+    </g>
+  </g>
+  
+  <!-- Magnifying Glass -->
+  <g class="neon-cyan" transform="translate(450, 190) scale(1.2)">
+    <circle cx="28" cy="28" r="24"/>
+    <line x1="46" y1="46" x2="68" y2="68"/>
+  </g>
+  
+  <!-- Smartphone -->
+  <g class="neon-green" transform="translate(650, 170) scale(1.3)">
+    <rect x="8" y="5" width="50" height="85" rx="7"/>
+    <rect x="14" y="18" width="38" height="55" rx="3"/>
+    <circle cx="33" cy="82" r="4"/>
+    <circle cx="33" cy="45" r="10"/>
+    <path d="M28,42 L40,45 L28,48 Z" fill="#7df2aa"/>
+  </g>
+  
+  <!-- Syringe -->
+  <g class="neon-cyan" transform="translate(880, 200) scale(1.2)">
+    <rect x="18" y="8" width="18" height="55" rx="3"/>
+    <rect x="12" y="63" width="30" height="10" rx="2"/>
+    <line x1="27" y1="73" x2="27" y2="90"/>
+    <line x1="21" y1="22" x2="33" y2="22"/>
+    <line x1="21" y1="35" x2="33" y2="35"/>
+    <line x1="21" y1="48" x2="33" y2="48"/>
+  </g>
+  
+  <!-- Paw Medium -->
+  <g class="subtle-green" transform="translate(1080, 210) scale(1)">
+    <ellipse cx="25" cy="40" rx="15" ry="12"/>
+    <ellipse cx="8" cy="18" rx="8" ry="10"/>
+    <ellipse cx="25" cy="8" rx="8" ry="10"/>
+    <ellipse cx="42" cy="18" rx="8" ry="10"/>
+  </g>
+  
+  <!-- Cross -->
+  <g class="neon-white" transform="translate(1280, 180) scale(1.3)">
+    <path d="M22,5 L38,5 L38,22 L55,22 L55,38 L38,38 L38,55 L22,55 L22,38 L5,38 L5,22 L22,22 Z"/>
+  </g>
+  
+  <!-- Heart Rate -->
+  <g class="neon-green" transform="translate(1480, 220) scale(1.4)">
+    <path d="M0,35 L25,35 L32,12 L45,58 L58,25 L70,42 L78,35 L100,35"/>
+  </g>
+  
+  <!-- Small Heart -->
+  <g class="subtle-cyan" transform="translate(1750, 200) scale(0.8)">
+    <path d="M25,45 C25,45 5,30 5,18 C5,8 12,2 22,8 C25,10 25,10 25,10 C25,10 25,10 28,8 C38,2 45,8 45,18 C45,30 25,45 25,45 Z"/>
+  </g>
+  
+  <!-- ============ CENTER AREA ============ -->
+  
+  <!-- Large Heart - Left -->
+  <g class="neon-cyan" transform="translate(40, 400) scale(1.6)">
+    <path d="M25,45 C25,45 5,30 5,18 C5,8 12,2 22,8 C25,10 25,10 25,10 C25,10 25,10 28,8 C38,2 45,8 45,18 C45,30 25,45 25,45 Z"/>
+  </g>
+  
+  <!-- Cat Silhouette -->
+  <g class="neon-green" transform="translate(200, 380) scale(1.4)">
+    <path d="M5,60 L5,35 Q12,18 28,18 L34,6 L40,18 L46,6 L52,18 Q65,22 65,35 L65,60"/>
+    <circle cx="22" cy="35" r="3"/>
+    <circle cx="42" cy="35" r="3"/>
+    <path d="M28,45 L35,50 L42,45"/>
+  </g>
+  
+  <!-- Clipboard - Center Left -->
+  <g class="neon-white" transform="translate(420, 390) scale(1.3)">
+    <rect x="8" y="18" width="55" height="70" rx="4"/>
+    <rect x="22" y="8" width="27" height="15" rx="3"/>
+    <line x1="18" y1="42" x2="53" y2="42"/>
+    <line x1="18" y1="55" x2="53" y2="55"/>
+    <line x1="18" y1="68" x2="40" y2="68"/>
+  </g>
+  
+  <!-- Vaccine Bottle -->
+  <g class="neon-cyan" transform="translate(640, 400) scale(1.3)">
+    <rect x="15" y="22" width="35" height="55" rx="6"/>
+    <rect x="20" y="10" width="25" height="18" rx="3"/>
+    <rect x="27" y="4" width="11" height="10"/>
+    <line x1="25" y1="42" x2="40" y2="42"/>
+    <line x1="25" y1="55" x2="40" y2="55"/>
+  </g>
+  
+  <!-- Large Paw - Center -->
+  <g class="neon-green" transform="translate(850, 370) scale(1.8)">
+    <ellipse cx="25" cy="40" rx="15" ry="12"/>
+    <ellipse cx="8" cy="18" rx="8" ry="10"/>
+    <ellipse cx="25" cy="8" rx="8" ry="10"/>
+    <ellipse cx="42" cy="18" rx="8" ry="10"/>
+  </g>
+  
+  <!-- Stethoscope - Center Right -->
+  <g class="subtle-white" transform="translate(1100, 400) scale(1)">
+    <circle cx="30" cy="50" r="15"/>
+    <path d="M30,35 L30,18 Q30,10 38,10 L48,10"/>
+    <path d="M12,10 L22,10 Q30,10 30,18"/>
+    <circle cx="12" cy="10" r="5"/>
+    <circle cx="48" cy="10" r="5"/>
+  </g>
+  
+  <!-- Dog Face -->
+  <g class="neon-cyan" transform="translate(1300, 380) scale(1.3)">
+    <ellipse cx="35" cy="35" rx="32" ry="28"/>
+    <ellipse cx="10" cy="12" rx="12" ry="18"/>
+    <ellipse cx="60" cy="12" rx="12" ry="18"/>
+    <circle cx="22" cy="30" r="4"/>
+    <circle cx="48" cy="30" r="4"/>
+    <ellipse cx="35" cy="45" rx="8" ry="6"/>
+  </g>
+  
+  <!-- Bone Large - Right -->
+  <g class="neon-green" transform="translate(1550, 420) scale(1.5)">
+    <path d="M15,22 Q3,16 3,27 Q3,38 15,32 L55,32 Q67,38 67,27 Q67,16 55,22 L15,22"/>
+  </g>
+  
+  <!-- Small Cross -->
+  <g class="subtle-cyan" transform="translate(1780, 400) scale(0.8)">
+    <path d="M22,5 L38,5 L38,22 L55,22 L55,38 L38,38 L38,55 L22,55 L22,38 L5,38 L5,22 L22,22 Z"/>
+  </g>
+  
+  <!-- ============ LOWER MIDDLE AREA ============ -->
+  
+  <!-- Medical Kit - Left -->
+  <g class="subtle-cyan" transform="translate(50, 600) scale(1.1)">
+    <rect x="5" y="15" width="55" height="45" rx="6"/>
+    <rect x="18" y="5" width="29" height="15" rx="4"/>
+    <path d="M32,25 L32,50"/>
+    <path d="M20,37 L44,37"/>
+  </g>
+  
+  <!-- Paw -->
+  <g class="neon-white" transform="translate(230, 580) scale(1.2)">
+    <ellipse cx="25" cy="40" rx="15" ry="12"/>
+    <ellipse cx="8" cy="18" rx="8" ry="10"/>
+    <ellipse cx="25" cy="8" rx="8" ry="10"/>
+    <ellipse cx="42" cy="18" rx="8" ry="10"/>
+  </g>
+  
+  <!-- Heart -->
+  <g class="neon-green" transform="translate(420, 600) scale(1.2)">
+    <path d="M25,45 C25,45 5,30 5,18 C5,8 12,2 22,8 C25,10 25,10 25,10 C25,10 25,10 28,8 C38,2 45,8 45,18 C45,30 25,45 25,45 Z"/>
+  </g>
+  
+  <!-- Pill -->
+  <g class="subtle-white" transform="translate(600, 620) scale(1)">
+    <rect x="5" y="12" width="55" height="24" rx="12"/>
+    <line x1="32" y1="12" x2="32" y2="36"/>
+  </g>
+  
+  <!-- Shield -->
+  <g class="neon-cyan" transform="translate(800, 580) scale(1.2)">
+    <path d="M35,5 L65,18 L65,50 Q65,75 35,88 Q5,75 5,50 L5,18 Z"/>
+    <g transform="translate(15, 28) scale(0.55)">
+      <ellipse cx="25" cy="38" rx="14" ry="11"/>
+      <ellipse cx="10" cy="18" rx="7" ry="9"/>
+      <ellipse cx="25" cy="8" rx="7" ry="9"/>
+      <ellipse cx="40" cy="18" rx="7" ry="9"/>
+    </g>
+  </g>
+  
+  <!-- Magnifying -->
+  <g class="subtle-green" transform="translate(1020, 600) scale(0.9)">
+    <circle cx="28" cy="28" r="22"/>
+    <line x1="44" y1="44" x2="65" y2="65"/>
+  </g>
+  
+  <!-- Phone -->
+  <g class="neon-white" transform="translate(1200, 570) scale(1.1)">
+    <rect x="8" y="5" width="45" height="80" rx="6"/>
+    <rect x="13" y="16" width="35" height="52" rx="2"/>
+    <circle cx="30" cy="77" r="4"/>
+  </g>
+  
+  <!-- Cat Silhouette -->
+  <g class="subtle-cyan" transform="translate(1400, 600) scale(0.9)">
+    <path d="M5,55 L5,32 Q12,18 25,18 L30,8 L35,18 L40,8 L45,18 Q55,20 55,32 L55,55"/>
+    <circle cx="20" cy="32" r="2.5"/>
+    <circle cx="38" cy="32" r="2.5"/>
+  </g>
+  
+  <!-- Bone -->
+  <g class="neon-green" transform="translate(1580, 620) scale(1.1)">
+    <path d="M15,22 Q3,16 3,27 Q3,38 15,32 L55,32 Q67,38 67,27 Q67,16 55,22 L15,22"/>
+  </g>
+  
+  <!-- Heart Small -->
+  <g class="subtle-white" transform="translate(1780, 600) scale(0.7)">
+    <path d="M25,45 C25,45 5,30 5,18 C5,8 12,2 22,8 C25,10 25,10 25,10 C25,10 25,10 28,8 C38,2 45,8 45,18 C45,30 25,45 25,45 Z"/>
+  </g>
+  
+  <!-- ============ BOTTOM AREA ============ -->
+  
+  <!-- Large Stethoscope - Bottom Left -->
+  <g class="neon-green" transform="translate(60, 800) scale(1.4)">
+    <circle cx="32" cy="58" r="20"/>
+    <path d="M32,38 L32,18 Q32,8 45,8 L60,8"/>
+    <path d="M4,8 L19,8 Q32,8 32,18"/>
+    <circle cx="4" cy="8" r="6"/>
+    <circle cx="60" cy="8" r="6"/>
+  </g>
+  
+  <!-- Dog Silhouette -->
+  <g class="neon-cyan" transform="translate(280, 820) scale(1.3)">
+    <path d="M10,50 L10,35 Q15,20 30,20 L40,15 L45,5 L50,15 L55,20 Q65,22 70,35 L70,50"/>
+    <circle cx="35" cy="28" r="2.5"/>
+    <ellipse cx="48" cy="32" rx="5" ry="2.5"/>
+  </g>
+  
+  <!-- Heart Rate -->
+  <g class="subtle-white" transform="translate(500, 860) scale(1.2)">
+    <path d="M0,30 L22,30 L28,10 L40,50 L52,22 L62,38 L70,30 L90,30"/>
+  </g>
+  
+  <!-- Paw Large -->
+  <g class="neon-white" transform="translate(720, 780) scale(1.5)">
+    <ellipse cx="25" cy="40" rx="15" ry="12"/>
+    <ellipse cx="8" cy="18" rx="8" ry="10"/>
+    <ellipse cx="25" cy="8" rx="8" ry="10"/>
+    <ellipse cx="42" cy="18" rx="8" ry="10"/>
+  </g>
+  
+  <!-- Syringe -->
+  <g class="subtle-green" transform="translate(950, 830) scale(1)">
+    <rect x="18" y="8" width="16" height="50" rx="2"/>
+    <rect x="12" y="58" width="28" height="9" rx="1"/>
+    <line x1="26" y1="67" x2="26" y2="82"/>
+  </g>
+  
+  <!-- Cross Large -->
+  <g class="neon-cyan" transform="translate(1120, 800) scale(1.4)">
+    <path d="M22,5 L38,5 L38,22 L55,22 L55,38 L38,38 L38,55 L22,55 L22,38 L5,38 L5,22 L22,22 Z"/>
+  </g>
+  
+  <!-- Cat Face -->
+  <g class="subtle-cyan" transform="translate(1340, 820) scale(0.9)">
+    <circle cx="35" cy="35" r="28"/>
+    <path d="M12,14 L18,28"/>
+    <path d="M58,14 L52,28"/>
+    <circle cx="24" cy="32" r="4"/>
+    <circle cx="46" cy="32" r="4"/>
+    <path d="M32,42 L35,47 L38,42"/>
+  </g>
+  
+  <!-- Pill -->
+  <g class="neon-green" transform="translate(1540, 850) scale(1.2)">
+    <rect x="5" y="12" width="55" height="24" rx="12"/>
+    <line x1="32" y1="12" x2="32" y2="36"/>
+  </g>
+  
+  <!-- Paw Small -->
+  <g class="subtle-white" transform="translate(1760, 830) scale(0.8)">
+    <ellipse cx="25" cy="40" rx="15" ry="12"/>
+    <ellipse cx="8" cy="18" rx="8" ry="10"/>
+    <ellipse cx="25" cy="8" rx="8" ry="10"/>
+    <ellipse cx="42" cy="18" rx="8" ry="10"/>
+  </g>
+  
+  <!-- ============ SCATTERED SMALL ELEMENTS ============ -->
+  
+  <!-- Dots for ambience -->
+  <circle class="neon-cyan" cx="180" cy="140" r="3"/>
+  <circle class="neon-green" cx="580" cy="100" r="2"/>
+  <circle class="neon-white" cx="1000" cy="150" r="2.5"/>
+  <circle class="neon-cyan" cx="1250" cy="120" r="2"/>
+  <circle class="neon-green" cx="1650" cy="160" r="3"/>
+  
+  <circle class="subtle-cyan" cx="350" cy="320" r="2"/>
+  <circle class="subtle-green" cx="780" cy="280" r="2.5"/>
+  <circle class="subtle-white" cx="1180" cy="300" r="2"/>
+  <circle class="subtle-cyan" cx="1500" cy="340" r="2"/>
+  <circle class="neon-green" cx="1850" cy="310" r="2"/>
+  
+  <circle class="neon-white" cx="150" cy="520" r="2.5"/>
+  <circle class="neon-cyan" cx="540" cy="490" r="2"/>
+  <circle class="subtle-green" cx="950" cy="530" r="3"/>
+  <circle class="neon-white" cx="1350" cy="500" r="2"/>
+  <circle class="subtle-cyan" cx="1700" cy="540" r="2.5"/>
+  
+  <circle class="subtle-white" cx="380" cy="720" r="2"/>
+  <circle class="neon-green" cx="680" cy="690" r="2.5"/>
+  <circle class="neon-cyan" cx="1050" cy="730" r="2"/>
+  <circle class="subtle-green" cx="1420" cy="700" r="2"/>
+  <circle class="neon-white" cx="1820" cy="720" r="3"/>
+  
+  <circle class="neon-cyan" cx="100" cy="950" r="2"/>
+  <circle class="subtle-white" cx="420" cy="980" r="2.5"/>
+  <circle class="neon-green" cx="820" cy="920" r="2"/>
+  <circle class="subtle-cyan" cx="1200" cy="960" r="3"/>
+  <circle class="neon-white" cx="1600" cy="940" r="2"/>
+  <circle class="subtle-green" cx="1880" cy="980" r="2.5"/>
+  
+</svg>
